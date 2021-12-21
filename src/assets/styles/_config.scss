@@ -1,0 +1,28 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+	/*========== Colors ==========*/
+  --color-primary: #FEE600;
+  --color-accent: #3483FA;
+
+	--color-neutral-darker: #333333;
+	--color-neutral-dark: #666666;
+  --color-neutral: #999999;
+	--color-neutral-light: #EEEEEE;
+
+
+	/*========== Font, fonts sizes and gaps ==========*/
+  --ff-main: 'Roboto', sans-serif;
+
+	--fs-extra-big: 4.6rem;
+	--fs-biggest: 2.8rem;
+	--fs-big: 2.4rem;
+	--fs-normal: 1.6rem;
+	--fs-small: 1.4rem;
+	--fs-smaller: 1.2rem;
+
+	--gap: 1.6rem;
+	--gap-big: 3.2rem;
+
+}
