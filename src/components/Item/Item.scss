@@ -1,0 +1,51 @@
+.Item {
+	display: flex;
+	padding: var(--gap);
+	gap: var(--gap);
+
+	picture {
+		height: 180px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+		img {
+			width: 180px;
+			height: auto;
+			max-height: 180px;
+			border-radius: var(--border-radius);
+		}
+	}
+
+	&__info {
+		width: 100%;
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			margin-top: var(--gap);
+			margin-bottom: var(--gap-big);
+
+			.price {
+				font-size: var(--fs-big);
+
+				.free_shiping {
+					margin-left: 4px;
+				}
+
+			}
+
+			.city {
+				font-size: var(--fs-smaller);
+				margin-right: 90px;
+			}
+
+		}
+
+		h2 {
+			font-weight: normal;
+			font-size: var(--fs-extra-normal);
+		}
+	}
+}

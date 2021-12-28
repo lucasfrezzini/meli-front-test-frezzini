@@ -1,0 +1,35 @@
+.SearchBar {
+	grid-column: 3 / 12;
+	display: flex;
+
+	input{
+		border: none;
+	}
+
+	input {
+		width: 100%;
+		font-size: var(--fs-extra-normal);
+		padding-left: 12px;
+		color: var(--color-neutral-darker);
+
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
+	}
+	input:focus {
+		outline: none
+	}
+	::placeholder {
+		color: var(--color-neutral-dark);
+	}
+
+	a {
+		padding: 4px 12px;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+
+		background-color: var(--color-neutral-light);
+		border-top-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+	}
+}

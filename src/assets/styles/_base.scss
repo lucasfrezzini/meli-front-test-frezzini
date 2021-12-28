@@ -13,7 +13,27 @@ ul, li {
 html {
 	font-size: 62.5%;
 }
+
 body {
 	font-family: var(--ff-main);
   font-size: 1.6rem;
+}
+
+.Section {
+	background-color: var(--color-white);
+	grid-column: 2 / 12;
+	border-radius: var(--border-radius);
+	margin-bottom: var(--gap-big);
+}
+
+.btn__buy {
+	color:var(--color-white);
+	background-color: var(--color-accent);
+	font-size: var(--fs-normal);
+	cursor: pointer;
+
+	border-radius: var(--border-radius);
+	border: none;
+	padding: 12px 0;
+	width: 100%;
 }

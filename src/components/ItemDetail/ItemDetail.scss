@@ -1,0 +1,43 @@
+.ItemDetail {
+	padding: var(--gap-big);
+
+	article {
+		grid-column: 1 / 8;
+
+		img {
+			width: 680px;
+			height: auto;
+		}
+
+		h3 {
+			font-weight: normal;
+			font-size: var(--fs-biggest);
+			margin-bottom: var(--gap-big);
+		}
+
+		p {
+			font-size: var(--fs-normal);
+			color: var(--color-neutral-dark);
+		}
+	}
+
+	aside {
+		grid-column: 8 / 11;
+
+		h4 {
+			font-size: var(--fs-small);
+			font-weight: normal;
+			margin-bottom: var(--gap);
+		}
+
+		h2 {
+			font-size: var(--fs-big);
+		}
+
+		h3 {
+			font-size: var(--fs-extra-big);
+			font-weight: normal;
+			margin: var(--gap-big) 0;
+		}
+	}
+}

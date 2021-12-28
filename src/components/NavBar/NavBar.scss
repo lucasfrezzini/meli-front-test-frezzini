@@ -2,11 +2,9 @@
 	background-color: var(--color-primary);
 	padding: 8px 0;
 
-	.container {
-		display: flex;
+	&__logo {
+		grid-column: 2 / 3;
 	}
 }
 
-.SearchBar {
-	display: flex;
-}
+

@@ -1,8 +1,8 @@
 @import './assets/styles/config';
+@import './assets/styles/utils';
 @import './assets/styles/base';
 
-.container {
-	margin: 0 auto;
-	max-width: 1200px;
+.Main {
+	background-color: var(--color-neutral-light);
+	min-height: calc(100vh - 52px);
 }
-
