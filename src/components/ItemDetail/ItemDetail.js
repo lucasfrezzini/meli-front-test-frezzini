@@ -1,10 +1,7 @@
 import './ItemDetail.scss'
 import React from 'react'
 
-import pictureDetail from '../../assets/images/pictureDetail.jpeg'
-
 const ItemDetail = ({item}) => {
-	console.log(item);
 
 	return (
 		<>
@@ -20,7 +17,7 @@ const ItemDetail = ({item}) => {
 					<p className="description">{item.description}</p>
 				</article>
 				<aside className="ItemDetail__info">
-					<h4><span className="condition">{item.condition}</span> - <span className="sold_quantity">{item.sold_quantity} vendidos</span></h4>
+					<h4><span className="condition">{item.condition === 'new' ? 'Nuevo' : 'Usado' }</span> - <span className="sold_quantity">{item.sold_quantity} vendidos</span></h4>
 					<h2>{item.title}</h2>
 					<h3>$ {item.price.amount}</h3>
 					<button className="btn__buy">Comprar</button>

@@ -9,18 +9,23 @@ const Results = () => {
 	const { search } = useParams();
 	const [results, setResults] = useState({})
 
+	console.log(results)
+
 	useEffect(() => {
-		getResults(search)
+		async function getData () {
+			await getResults(search)
 			.then(data => setResults(data))
+		}
+		getData()
 	}, [search])
 
 	return (
 		<>
 		<div className="container grid grid-cols-12">
-			<Breadcrumb categories={results.categories}/>
+			{ results && <Breadcrumb categories={results.categories?.values[0].path_from_root} /> }
 		</div>
 		<section className="container grid grid-cols-12">
-			<ResultsList items={results.items} />
+			{ results && <ResultsList items={results.items} /> }
 		</section>
 		</>
 	)

@@ -2,8 +2,8 @@ const getItem = async (id) => {
 	const API_URL = 'https://api.mercadolibre.com/items/'
 	const URL_ITEM = API_URL + id
 	const URL_DESC = URL_ITEM + '/description'
+	let URL_CAT = 'https://api.mercadolibre.com/categories/'
 
-	console.log(URL_DESC)
 	const author = {
 		"name": "Lucas Nicolás",
 		"lastname": "Frezzini"
@@ -16,6 +16,7 @@ const getItem = async (id) => {
 				return {
 					"id": data.id,
 					"title": data.title,
+					"category_id": data.category_id,
 					"price": {
 						"currency": data.currency_id,
 						"amount": data.price,
@@ -28,15 +29,22 @@ const getItem = async (id) => {
 				}
 			})
 
+	URL_CAT = await URL_CAT + dataItem.category_id
+	const dataCategoryFromRoot =
+		await fetch(URL_CAT)
+			.then(res => res.json())
+			.then(data => { return data.path_from_root })
+
 	const dataDescription =
 		await fetch(URL_DESC)
 			.then(res => res.json())
-			.then(data => {return data.plain_text})
+			.then(data => { return data.plain_text })
 
-	return {
+	return await {
 		"author": author,
 		"item": {
 			...dataItem,
+			"category_from_root": dataCategoryFromRoot,
 			"description": dataDescription
 		}
 	}

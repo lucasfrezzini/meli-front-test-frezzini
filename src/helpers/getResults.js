@@ -11,7 +11,8 @@ const getResults = async (query) => {
 		await fetch(URL)
 			.then(res => res.json())
 			.then(data => {
-				const categories = data.filters[0]
+				const categories  = data.filters[0]
+
 				let items = []
 				data.results.map(item => {
 					items.push({
@@ -36,7 +37,7 @@ const getResults = async (query) => {
 				}
 			})
 
-	return data
+	return await data
 
 }
 

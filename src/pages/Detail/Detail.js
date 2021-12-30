@@ -8,21 +8,23 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail'
 
 const Detail = () => {
 	const { id } = useParams();
-	const [itemDetail, setItemDetail] = useState({})
+	const [itemDetail, setItemDetail] = useState()
 
 	useEffect(() => {
-		getItem(id)
-			.then(data => setItemDetail(data))
-	}, [])
-
+		async function getData () {
+			await getItem(id)
+				.then(data => setItemDetail(data))
+		}
+		getData()
+	}, [id])
 
 	return (
 		<>
 		<div className="container grid grid-cols-12">
-			<Breadcrumb/>
+			{itemDetail && <Breadcrumb categories={itemDetail.item.path_from_root} detail={true} />}
 		</div>
 		<section className="container grid grid-cols-12">
-			<ItemDetail item={itemDetail.item} />
+			{itemDetail && <ItemDetail item={itemDetail.item} />}
 		</section>
 		</>
 	)
