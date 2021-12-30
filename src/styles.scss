@@ -1,8 +1,3 @@
 @import './assets/styles/config';
 @import './assets/styles/utils';
 @import './assets/styles/base';
-
-.Main {
-	background-color: var(--color-neutral-light);
-	min-height: calc(100vh - 52px);
-}

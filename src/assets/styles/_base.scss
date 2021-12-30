@@ -19,6 +19,11 @@ body {
   font-size: 1.6rem;
 }
 
+.Main {
+	background-color: var(--color-neutral-light);
+	min-height: calc(100vh - 52px);
+}
+
 .Section {
 	background-color: var(--color-white);
 	grid-column: 2 / 12;

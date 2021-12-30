@@ -9,8 +9,6 @@ const Results = () => {
 	const { search } = useParams();
 	const [results, setResults] = useState({})
 
-	console.log(results)
-
 	useEffect(() => {
 		async function getData () {
 			await getResults(search)

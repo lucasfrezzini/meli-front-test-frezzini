@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import iconFreeShiping from '../../assets/images/ic_shipping.png'
+import iconFreeShiping2x from '../../assets/images/ic_shipping@2x.png'
 
 const Item = ({item}) => {
 	const {
@@ -21,7 +22,18 @@ const Item = ({item}) => {
 			</picture>
 			<section className="Item__info">
 				<header>
-					<p className="price">$ {price.amount} {free_shipping && <span className="free_shiping"><img src={iconFreeShiping} alt="Free Shiping" /></span>}</p>
+					<p className="price">
+						$ {price.amount}
+						{
+						free_shipping &&
+							<span className="free_shiping">
+								<img
+									src={iconFreeShiping}
+									srcSet={`${iconFreeShiping2x} 2x`}
+									alt="Free Shiping" />
+							</span>
+						}
+					</p>
 					<p className="city">{address_state}</p>
 				</header>
 				<h2><Link to={`/items/${id}`} >{title}</Link></h2>
